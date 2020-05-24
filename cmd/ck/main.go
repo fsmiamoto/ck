@@ -22,6 +22,9 @@ func main() {
 
 func run(path string) error {
 	repo, err := git.OpenRepository(path)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	branches, err := repo.Branches()
 	if err != nil {

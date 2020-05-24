@@ -11,7 +11,10 @@ type Repository struct {
 }
 
 func OpenRepository(path string) (*Repository, error) {
-	repo, err := gogit.PlainOpen(path)
+	repo, err := gogit.PlainOpenWithOptions(path, &gogit.PlainOpenOptions{
+		DetectDotGit: true,
+	})
+
 	if err != nil {
 		return nil, err
 	}
