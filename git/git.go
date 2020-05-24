@@ -56,5 +56,6 @@ func checkoutInRepo(repo *gogit.Repository, branch string) error {
 	}
 	return worktree.Checkout(&gogit.CheckoutOptions{
 		Branch: plumbing.ReferenceName("refs/heads/" + branch),
+		Keep:   true,
 	})
 }
