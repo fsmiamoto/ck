@@ -1,6 +1,7 @@
 # ck
 
-Checkout git branches with fuzzy finding
+Checkout git branches with fuzzy finding, using [go-fuzzyfinder](https://github.com/ktr0731/go-fuzzyfinder)
+and [go-git](https://github.com/go-git/go-git)
 
 ![Demo of ck](.github/gifs/demo.svg)
 
