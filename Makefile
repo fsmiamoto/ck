@@ -15,6 +15,6 @@ clean:
 	go clean
 
 .PHONY: test
-test: build
+test:
 	go test -v ./...
 
